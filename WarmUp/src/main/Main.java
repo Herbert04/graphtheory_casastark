@@ -7,7 +7,7 @@ import graph.*;
 
 public class Main {
 
-/*teste*/ 
+
     public static void main(String[] args) {
 
         Set<Vertice> vertices = new HashSet<Vertice>();
@@ -16,6 +16,7 @@ public class Main {
         Vertice v1 = new Vertice("v1");
         Vertice v2 = new Vertice("v2");
         Vertice v3 = new Vertice("v3");
+       // Vertice v4 = new Vertice("v4");
 
         Aresta aresta1 = new Aresta(v1, v2, 0);
         Aresta aresta2 = new Aresta(v1, v3, 0);
@@ -24,6 +25,7 @@ public class Main {
         vertices.add(v1);
         vertices.add(v2);
         vertices.add(v3);
+       // vertices.add(v4);
 
         arestas.add(aresta1);
         arestas.add(aresta2);
@@ -31,8 +33,13 @@ public class Main {
 
         Grafo grafo = new Grafo(vertices, arestas);
 
-        System.out.println(grafo.toString());
+       // System.out.println(grafo.toString());
+       // System.out.println(grafo.getAdjacentes(v3));
+      // System.out.println(grafo.ehCompleto());
+       
+      // System.out.println(grafo.ehRegular());
 
-    }
+       System.out.println(grafo.ehConexo());
 
+}
 }
