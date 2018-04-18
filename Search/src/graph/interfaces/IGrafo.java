@@ -1,4 +1,4 @@
-package graph.interfaces;
+﻿package graph.interfaces;
 
 import graph.Vertice;
 
@@ -14,7 +14,7 @@ public interface IGrafo {
     public boolean ehConexo();
 
     // Executa a busca em Largura
-    public void buscaLargura();
+   public void buscaLargura(Vertice v);
 
     //Executa a busca em profundidade
     public void buscaProfundidade();
