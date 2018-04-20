@@ -45,7 +45,7 @@ public class Grafo implements IGrafo {
             }
         }
         if (cont > 0) {
-            System.out.print("Grafico não é conexo");
+            System.out.print("Grafico Não é Conexo");
             return false;
         } else {
             System.out.println("Grafico conexo");
