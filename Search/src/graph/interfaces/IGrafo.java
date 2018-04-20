@@ -17,7 +17,7 @@ public interface IGrafo {
    public void buscaLargura(Vertice v);
 
     //Executa a busca em profundidade
-    public void buscaProfundidade();
+    public void buscaProfundidade(Vertice v);
 
     /*
           Retorna uma string que representa o grafo na forma:
