@@ -65,7 +65,26 @@ public class Grafo implements IGrafo {
     
     @Override
     public void buscaProfundidade() {
+        v.setVisitado(true);
+        this.visitados.add(v);
+        pilha.push(v);
+        System.out.println(visitados.toString());
+        Vertice w;
 
+        while (!pilha.isEmpty()) {
+            Set<Vertice> adjacentes = getAdjacentes(pilha.lastElement());
+            for (Vertice adj : adjacentes) {
+                if (adj != null && adj.isVisitado() == false) {
+                    w = adj;
+
+                    buscaProfundidade(w);
+                    pilha.push(w);
+
+                }
+            }
+            // if(!pilha.isEmpty()) {
+            pilha.pop();
+        }
     }
 
 
