@@ -55,7 +55,7 @@ public class Grafo implements IGrafo {
 				if (adj != null && adj.isVisitado() == false) {
 					w = adj;
 
-					buscaProfundidade(w);
+					buscaLargura(w);
 					fila.add(w);
 
 				}
