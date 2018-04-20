@@ -37,7 +37,20 @@ public class Grafo implements IGrafo {
 
     @Override
     public boolean ehConexo() {
-        return false;
+        int cont = 0;
+        for (Vertice vertice : this.vertices) {
+
+            if (!vertice.isVisitado()) {
+                cont++;
+            }
+        }
+        if (cont > 0) {
+            System.out.print("Grafico não é conexo");
+            return false;
+        } else {
+            System.out.println("Grafico conexo");
+            return true;
+        }
     }
   
     @Override
