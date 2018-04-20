@@ -11,7 +11,7 @@ public class Grafo implements IGrafo {
     private Set<Vertice> vertices = new HashSet<Vertice>();
     private Set<Aresta> arestas = new HashSet<Aresta>();
     private List<Vertice> visitados;
-    Stack<Vertice> pilha = new Stack<Vertice>();
+
 
     public Grafo(Set<Vertice> vertices, Set<Aresta> arestas) {
         this.vertices = vertices;
@@ -66,6 +66,7 @@ public class Grafo implements IGrafo {
     
     @Override
     public void buscaProfundidade() {
+        Stack<Vertice> pilha = new Stack<Vertice>();
         v.setVisitado(true);
         this.visitados.add(v);
         pilha.push(v);
