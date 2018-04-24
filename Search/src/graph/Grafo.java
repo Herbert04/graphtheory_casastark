@@ -17,7 +17,7 @@ public class Grafo implements IGrafo {
         this.vertices = vertices;
         this.arestas = arestas;
     }
-// Lista de vertices adjacentes
+/* Lista de vertices adjacentes*/
     @Override
     public Set<Vertice> getAdjacentes(Vertice v) {
         Set<Vertice> adjacentes = new HashSet<Vertice>();
@@ -48,13 +48,13 @@ public class Grafo implements IGrafo {
             System.out.print("O grafo não é conexo");
             return false;
         } else {
-            System.out.println("O grafo é conexo"");
+            System.out.println("O grafo é conexo");
             return true;
         }
     }
   
     @Override
-   public void buscaLargura(Vertice v) {
+   	public void buscaLargura(Vertice v) {
 		Queue<Vertice> fila = new PriorityQueue<Vertice>();
 		v.setVisitado(true);
 		this.visitados.add(v);
