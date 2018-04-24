@@ -78,7 +78,7 @@ public class Grafo implements IGrafo {
 	}
     
     @Override
-    public void buscaProfundidade() {
+    public void buscaProfundidade(Vertice v) {
         Stack<Vertice> pilha = new Stack<Vertice>();
         v.setVisitado(true);
         this.visitados.add(v);
