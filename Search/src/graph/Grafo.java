@@ -1,4 +1,4 @@
-package graph;
+﻿package graph;
 
 import graph.interfaces.IGrafo;
 
@@ -45,10 +45,10 @@ public class Grafo implements IGrafo {
             }
         }
         if (cont > 0) {
-            System.out.print("Grafico Não é Conexo");
+            System.out.print("O grafo não é conexo");
             return false;
         } else {
-            System.out.println("Grafico conexo");
+            System.out.println("O grafo é conexo"");
             return true;
         }
     }
