@@ -10,12 +10,14 @@ import java.util.Set;
 import java.util.Stack;
 
 import graph.IGrafo;
+import java.util.Arrays;
 
 public class Grafo implements IGrafo {
 
 	private Set<Vertice> vertices = new HashSet<Vertice>();
 	private Set<Aresta> arestas = new HashSet<Aresta>();
 	private List<Vertice> visitados;
+        private List<Vertice> caminhos = new ArrayList<>();
 
 	Stack<Vertice> pilha = new Stack<Vertice>();
 
@@ -102,7 +104,6 @@ public class Grafo implements IGrafo {
 	}
 
 	public void buscaProfundidade(Vertice v) {
-
 		v.setVisitado(true);
 		this.visitados.add(v);
 		pilha.push(v);
@@ -124,8 +125,38 @@ public class Grafo implements IGrafo {
 			pilha.pop();
 		}
 	}
-
-	@Override
+        
+        public void Dijkstra (Vertice v, Grafo g){
+            String [][] resultado_dijkstra = new String [g.vertices.size()][4];
+            int i = 0;
+            for (Vertice vertice : g.vertices) {
+                if(vertice.getNome().equals(v.getNome())){
+                    vertice.setCaminho(0);
+                    resultado_dijkstra[i][0] = (String)vertice.getNome();
+                    resultado_dijkstra[i][1] = "sim";
+                    resultado_dijkstra[i][2] = "0";
+                    resultado_dijkstra[i][3] = "-";
+                    i++;
+                }else{
+                    vertice.setCaminho((int) Double.POSITIVE_INFINITY);                            
+                    resultado_dijkstra[i][0] = (String)vertice.getNome();
+                    resultado_dijkstra[i][1] = "não";
+                    resultado_dijkstra[i][2] = Integer.toString(vertice.getCaminho());
+                    resultado_dijkstra[i][3] = "-";
+                 i++;
+                }
+            }            
+            Set<Vertice> adjacentes = getAdjacentes(v);
+                for (Vertice adj : adjacentes) {
+                    
+                }
+            
+        
+        }
+             
+        
+	@Override 
+        
 	public String toString() {
 
 		String retorno = "";
